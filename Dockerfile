@@ -14,5 +14,6 @@ RUN rabbitmq-plugins enable --offline autocluster
 COPY assets/scripts/*.sh /usr/local/bin/
 COPY assets/supervisor/supervisord.conf /etc/supervisor/
 COPY assets/supervisor/conf.d/*.conf /etc/supervisor/conf.d/
+RUN chmod 755 /usr/local/bin/*.sh
 
 CMD ["app:start"]
