@@ -3,7 +3,7 @@
 set -e
 
 
-MARATHON_URL="${1-leader.mesos/marathon}"
+MARATHON_URL="${1:-leader.mesos/marathon}"
 TASK_LIST_URL="$1/v2/apps/$2/tasks"
 HOST_FILE_PATH="$3"
 
