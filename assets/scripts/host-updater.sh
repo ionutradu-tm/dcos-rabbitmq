@@ -21,7 +21,7 @@ buildHostBlock()
         if [ "$hostIp" != "null" ]
         then
             local hostName=$(_jq '.id')
-            if [[ "$hostName" -eq "$MESOS_TAKS_ID" ]];then
+            if [[ "$hostName" == "$MESOS_TAKS_ID" ]];then
                 export hostIp="127.0.0.1"
             fi
             echo "Found $hostName with IP: $hostIp"
