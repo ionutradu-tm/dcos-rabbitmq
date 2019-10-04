@@ -22,7 +22,7 @@ buildHostBlock()
         then
             local hostName=$(_jq '.id')
             if [[ "$hostName" == "$MESOS_TASK_ID" ]];then
-                export hostIp="127.0.0.1"
+                hostIp=$(_jq '.ipAddresses[0].ipAddress')
             fi
             echo "Found $hostName with IP: $hostIp"
             hostName="${hostName//./-}"
