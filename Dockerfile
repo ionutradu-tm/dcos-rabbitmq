@@ -1,4 +1,4 @@
-FROM rabbitmq:3.11.22-management-alpine
+FROM rabbitmq:3.12.13-management-alpine
 
 ENV RABBITMQ_AUTOCLUSTER_VERSION 0.8.0
 
